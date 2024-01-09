@@ -70,3 +70,10 @@ Day 12:
 1) C Program to perform Hashing with all collision resolving techniques
 2) C Program for Min Heap and Max Heap
 3) C Program to perform Heap sort ascending and Descending order
+
+Day 13:
+1) Bubble Sort
+2) Insertion Sort
+3) Radix Sort
+4) Merge Sort
+5) Shell Sort
