@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void swap(int*a,int *b){
+	int temp=*a;
+	*a=*b;
+	*b=temp;
+	return;
+}
+
+void select(int arr[],int n){
+	int k=1;
+	int min=arr[0];
+	int begin=0;
+	while(k<=n-1){
+		int j, i;
+		for( i=begin;i<n;i++){
+			if(arr[i]<min){
+				j=i;
+			}
+		}
+		swap(&arr[j],&arr[begin]);
+		begin++;
+		min=arr[begin];
+		k++;
+	}
+	return;
+}
+
+int main() {
+	printf("Name: Divyadharshini\nReg no: 192324031\n");
+	int i;
+    int arr[] = {99, 66, -6, -11, 6};
+    select(arr,6);
+    for( i=0;i<6;i++){
+    	printf("%d ",arr[i]);
+	}
+    return 0;
+}
