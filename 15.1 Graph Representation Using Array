@@ -1,0 +1,52 @@
+//Graph Representation Using Array
+#include <stdio.h>
+#include <stdbool.h>
+
+#define MAX_VERTICES 100
+
+struct Graph {
+    int vertices;
+    int matrix[MAX_VERTICES][MAX_VERTICES];
+};
+
+struct Graph* createMatrix(struct Graph* graph, int vertices){
+	graph->vertices=vertices;
+	int i,j;
+	for(i=0;i<vertices;i++){
+		for(j=0;j<vertices;j++){
+			graph->matrix[i][j]=0;
+		}
+	}
+	return graph;
+}
+
+void insertVertices(struct Graph *graph,int from,int to){
+	graph->matrix[from-1][to-1]=1;
+	graph->matrix[to-1][from-1]=1;
+	return;
+}
+
+void print(struct Graph *graph){
+	int i,j;
+	for(i=0;i<graph->vertices;i++){
+		for(j=0;j<graph->vertices;j++){
+			printf("%d ",graph->matrix[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+int main() {
+	printf("\nName:Divyadharshini\nRegno:192324031\n");
+	struct Graph graph;
+	createMatrix(&graph,5);
+	insertVertices(&graph,3,6);
+    insertVertices(&graph,7,9);
+    insertVertices(&graph,10,3);
+    insertVertices(&graph,5,7);
+    insertVertices(&graph,3,3);
+    insertVertices(&graph,7,8);
+    insertVertices(&graph,9,1);
+    print(&graph);
+    return 0;
+}
