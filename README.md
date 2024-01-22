@@ -85,3 +85,15 @@ Day 14:
 Day 15:
 1) Graph Repersentation Using Array
 2)  Graph Repersentation Using Linked List
+
+Day 16:
+1) Prim's Algorithm
+2) Kruskal's Algorithm
+
+Day 17:
+1) Dijkstar's Algorithm weighted directed
+2) Dijkstar's Algorithm unweighted directional
+
+Day 18:
+1) Implement of c Program to find BFS for the given Graph
+2) Implement of c Program to find DFS for the given Graph
